@@ -1,6 +1,0 @@
-# https://github.com/permalik/go_construct
-[devshell]
-packages = [
-	"go_1_23",
-	"golangci-lint",
-]
