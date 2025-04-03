@@ -23,6 +23,7 @@
             pkgs.alejandra
             pkgs.go_1_23
             pkgs.golangci-lint
+            pkgs.pre-commit
           ];
 
           shellHook = ''
