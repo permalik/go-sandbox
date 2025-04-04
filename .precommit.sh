@@ -4,40 +4,45 @@ pre-commit install
 
 pre-commit clean
 
-cat << 'EOF' >> .git/hooks/pre-commit
+{
+cat << 'EOF'
+#!/bin/bash
 
-# Run gofmt, goimports, and golangci-lint on all staged and unmodified Go files
-echo "Running gofmt, goimports, and golangci-lint..."
+# Format and lint
+echo "Go format and lint.."
 
-# Find all Go files in the repository (staged or unmodified)
-ALL_GO_FILES=$(git ls-files -- '*.go')
+# # Find all Go files in the repository (staged or unmodified)
+# ALL_GO_FILES=$(git ls-files -- '*.go')
+#
+# if [ -z "$ALL_GO_FILES" ]; then
+#     echo "No Go files to format or lint."
+#     exit 0
+# fi
 
-if [ -z "$ALL_GO_FILES" ]; then
-    echo "No Go files to format or lint."
-    exit 0
-fi
+echo "Execute: goimports"
+goimports -l -w .
 
-# Run gofmt and goimports on all Go files
-echo "Running gofmt..."
-gofmt -w $ALL_GO_FILES
-
-echo "Running goimports..."
-goimports -w $ALL_GO_FILES
-
-# Add formatted files back to the staging area
-git add $ALL_GO_FILES
+# # Add formatted files back to the staging area
+# git add $ALL_GO_FILES
 
 # Run golangci-lint on all Go files
-echo "Running golangci-lint..."
-golangci-lint run --fix --timeout=5m $ALL_GO_FILES
+echo "Execute: golangci-lint"
+golangci-lint run --fix --timeout=5m
 
-# If linting fails, do not allow the commit
+# Fail commit on linting errors
 if [ $? -ne 0 ]; then
-    echo "golangci-lint failed. Fix the errors before committing."
+    echo "Error: golangci-lint failed."
     exit 1
 fi
 
-echo "All checks passed successfully!"
+echo "Complete: Go format and lint"
 EOF
+
+    cat .git/hooks/pre-commit
+} > .git/hooks/pre-commit.tmp
+
+mv .git/hooks/pre-commit.tmp .git/hooks/pre-commit
+
+sudo chmod +x .git/hooks/pre-commit
 
 echo "Appended Go formatting and linting"
