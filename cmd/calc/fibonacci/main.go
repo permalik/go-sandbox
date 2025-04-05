@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("starting fib..")
+	fmt.Println("starting fib....")
 	for n := range 10 {
 		fmt.Printf("%d ", fibonacci(n))
 	}
