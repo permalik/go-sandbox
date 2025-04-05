@@ -24,3 +24,12 @@ jobs:
 
     - name: Test Build
       run: nix build
+
+  debug:
+    needs: [build]
+    runs-on: [self-hosted, Linux, X64]
+    if: ${{ failure() }}
+    steps:
+      - run: |
+          echo "Status: Build failed"
+          exit 1
