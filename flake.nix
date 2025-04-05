@@ -13,11 +13,18 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
+        pname = "go_curricula";
+        version = "0.0.1";
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = false;
         };
       in {
+        packages.default = pkgs.buildGoModule {
+          inherit pname version;
+          src = ./.;
+          vendorHash = null;
+        };
         devShells.default = pkgs.mkShell {
           buildInputs = [
             pkgs.alejandra
