@@ -1,5 +1,5 @@
 {
-  description = "go_curricula";
+  description = "go_sandbox";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-24.11";

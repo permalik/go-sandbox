@@ -1,19 +1,32 @@
-# go_curricula
-curricula:Go Programming
+# go_sandbox
+sandbox:Go Curricula and Turnkey Ecosystem
 
-## Development Environment
-### Getting Started
+[Environment](#environment)
+    - [Development](#development)
+    - [CI](#ci)
+    - [Production](#production)
+[Curricula](#curricula)
+    - [Fundamental](#fundamental)
+    - [Construct](#construct)
+    - [DataStructure](#datastructure)
+    - [Algorithm](#algorithm)
+
+## Environment
+### Development
+#### Getting Started
 Clone the repo
 ```sh
-git clone git@github.com:permalik/go_curricula.git
+git clone git@github.com:permalik/go_sandbox.git
 ```
+
+[Install Nix](https://nixos.org/download/)
 
 Enter Nix shell
 ```sh
 nix develop
 ```
 
-#### Pre-Commit
+##### Pre-Commit
 Go formatter, linter, and various Pre-Commit hooks.
 
 Initialize
@@ -22,7 +35,7 @@ Initialize
 sudo ./.precommit.sh
 ```
 
-### Tools
+#### Tools
 Manual Nix Format
 ```sh
 alejandra <target>
@@ -38,21 +51,25 @@ Manual Go Lint
 golangci-lint run --fix --timeout=5m
 ```
 
-## CI Environment
+### CI
 GitHub Actions on Push and Pull Request using Ubuntu x86_64-Linux Self-Hosted Runner
 
-## Build Environment
-### Development Build
+### Build Environment
+#### Development Build
 ```sh
 # Restart Docker
 orb restart docker
 
 # Create image
-docker build -t go_curricula:dev .
+docker build -t go_sandbox:dev .
 
 # Build ephemeral container
-docker run --rm go_curricula:dev
+docker run --rm go_sandbox:dev
 
 # Destroy image
-docker rmi go_curricula:dev
+docker rmi go_sandbox:dev
 ```
+
+<!--TODO:
+
+-->

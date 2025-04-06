@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/permalik/go_curricula/fundamentals"
+	"github.com/permalik/go_sandbox/fundamentals"
 )
 
 func main() {

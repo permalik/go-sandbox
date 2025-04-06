@@ -22,5 +22,5 @@ WORKDIR /bin
 
 # Copy /nix/store
 COPY --from=builder /tmp/nix-store-closure /nix/store
-COPY --from=builder /tmp/build/result /go_curricula
-CMD ["/go_curricula/bin/go_curricula"]
+COPY --from=builder /tmp/build/result /go_sandbox
+CMD ["/go_sandbox/bin/go_sandbox"]
