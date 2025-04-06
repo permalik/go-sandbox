@@ -1,5 +1,5 @@
 # go_sandbox
-sandbox:Go Curricula and Turnkey Ecosystem
+sandbox:Go Programming and Turnkey Ecosystem
 
 [Environment](#environment)
 - [Development](#development)
