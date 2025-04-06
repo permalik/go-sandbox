@@ -11,3 +11,6 @@ trim_trailing_whitespace = true
 # Go
 [*.go]
 indent_style = tab
+
+# Markdown
+trim_trailing_whitespace = false

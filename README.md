@@ -2,6 +2,7 @@
 sandbox:Go Programming and Turnkey Ecosystem
 
 [Environment](#environment)
+- [Configuration](#configuration)
 - [Development](#development)
 - [CI](#ci)
 - [Production](#production)
@@ -29,11 +30,6 @@ nix develop
 ```
 
 #### Tooling
-##### Git
-<!--TODO:
-Add shortcuts to flake
--->
-
 ##### Format and Lint
 Nix Format
 ```sh
@@ -64,6 +60,11 @@ sudo ./.precommit.sh
 
 #### Testing
 <!--TODO:-->
+
+### Configuration
+#### Shell
+The root `.bashrc` will be sourced within the shell.
+If changes are needed, update `.bashrc` and restart the shell with `nix develop`
 
 ### CI
 GitHub Actions on Push and Pull Request using Ubuntu x86_64-Linux Self-Hosted Runner
