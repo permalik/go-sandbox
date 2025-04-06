@@ -2,16 +2,15 @@
 sandbox:Go Curricula and Turnkey Ecosystem
 
 [Environment](#environment)
-    - [Development](#development)
-    - [CI](#ci)
-    - [Production](#production)
-    - [Nuke](#nuke)
-
+- [Development](#development)
+- [CI](#ci)
+- [Production](#production)
+- [Nuke](#nuke)
 [Curricula](#curricula)
-    - [Fundamental](#fundamental)
-    - [Construct](#construct)
-    - [DataStructure](#datastructure)
-    - [Algorithm](#algorithm)
+- [Fundamental](#fundamental)
+- [Construct](#construct)
+- [DataStructure](#datastructure)
+- [Algorithm](#algorithm)
 
 ## Environment
 ### Development
