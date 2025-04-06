@@ -5,7 +5,7 @@ import "fmt"
 type FibonacciVersion func(int) int
 
 func Fibonacci(fn FibonacciVersion) {
-	fmt.Println("starting fib....")
+	fmt.Println("starting fib..")
 	for n := range 10 {
 		fmt.Printf("%d ", fn(n))
 	}
