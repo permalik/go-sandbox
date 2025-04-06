@@ -5,6 +5,7 @@ sandbox:Go Curricula and Turnkey Ecosystem
     - [Development](#development)
     - [CI](#ci)
     - [Production](#production)
+    - [Nuke](#nuke)
 [Curricula](#curricula)
     - [Fundamental](#fundamental)
     - [Construct](#construct)
@@ -54,7 +55,7 @@ golangci-lint run --fix --timeout=5m
 ### CI
 GitHub Actions on Push and Pull Request using Ubuntu x86_64-Linux Self-Hosted Runner
 
-### Build Environment
+### Production
 #### Development Build
 ```sh
 # Restart Docker
@@ -70,6 +71,13 @@ docker run --rm go_sandbox:dev
 docker rmi go_sandbox:dev
 ```
 
-<!--TODO:
+### Nuke
+Follow instructions to purge curricula and launch a turnkey ecosystem
 
--->
+<!--TODO:-->
+
+## Curricula
+### Fundamental
+### Construct
+### DataStructure
+### Algorithm
