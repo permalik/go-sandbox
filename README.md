@@ -1,4 +1,4 @@
-# go_construct
+# go_curricula
 construct:Go Programming
 
 ## Development
