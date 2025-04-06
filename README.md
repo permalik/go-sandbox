@@ -28,6 +28,12 @@ Enter Nix shell
 nix develop
 ```
 
+#### Tooling
+##### Git
+<!--TODO:
+Add shortcuts to flake
+-->
+
 ##### Pre-Commit
 Go formatter, linter, and various Pre-Commit hooks.
 
@@ -73,7 +79,7 @@ docker rmi go_sandbox:dev
 ```
 
 ### Nuke
-Follow instructions to purge curricula and launch a turnkey ecosystem
+Follow instructions to purge curricula and launch a somewhat opinionated turnkey ecosystem
 
 <!--TODO:-->
 
