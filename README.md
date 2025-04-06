@@ -100,7 +100,9 @@ Continuous Delivery
 -->
 
 ### Nuke
-Follow instructions to purge curricula and launch a somewhat opinionated turnkey ecosystem.  
+Follow instructions to purge curricula and launch a somewhat opinionated turnkey ecosystem.
+
+Initialize Purge
 ```sh
 # Make script executable
 sudo chmod +x nuke.sh
@@ -109,7 +111,7 @@ sudo chmod +x nuke.sh
 sudo ./nuke.sh
 ```
 
-Update project/repository naming in various places:
+Update project/repository naming in various places and update the README:
 - `./.bashrc`
 - `Dockerfile`
 - `README.md`
