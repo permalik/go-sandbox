@@ -6,7 +6,6 @@ sandbox:Go Programming and Turnkey Ecosystem
 - [Development](#development)
 - [CI](#ci)
 - [Production](#production)
-- [Nuke](#nuke)
 
 ## Environment
 ### Development
