@@ -1,4 +1,9 @@
+# Prompt
+export PS1="\n\[\e[1;32m\][devshell](go) \w\n❯ \[\e[0m\]"
+
 # Aliases
+alias docker-build-dev="docker build -t go_sandbox:dev ."
+alias docker-run-dev="docker run --rm go_sandbox:dev"
 alias nv="nvim"
 alias glr="pretty_git_log"
 alias gs="git status"

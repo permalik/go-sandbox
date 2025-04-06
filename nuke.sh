@@ -1,3 +1,34 @@
+#!/bin/bash
+
+#
+# Destroy Non-Vitals
+#
+
+# Remove Go Source
+rm main.go
+rm go.mod
+rm -rf fundamentals
+
+#
+# Initialize Boilerplate
+#
+
+# Init main.go
+cat << EOF > main.go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+EOF
+
+# Init Go Module
+go mod init go_sandbox
+
+# Rewrite README
+cat << EOF > README.md
 # go_sandbox
 sandbox:Go Programming and Turnkey Ecosystem
 
@@ -7,12 +38,6 @@ sandbox:Go Programming and Turnkey Ecosystem
 - [CI](#ci)
 - [Production](#production)
 - [Nuke](#nuke)
-
-[Curricula](#curricula)
-- [Fundamental](#fundamental)
-- [Construct](#construct)
-- [DataStructure](#datastructure)
-- [Algorithm](#algorithm)
 
 ## Environment
 ### Development
@@ -51,15 +76,9 @@ Go formatter, linter, and various Pre-Commit hooks.
 
 Initialize
 ```sh
-# Make script executable
-sudo chmod +x precommit.sh
-
-# Execute script
-sudo ./precommit.sh
+# Run the root init script
+sudo ./.precommit.sh
 ```
-<!--TODO:
-##### Secret Management
--->
 
 #### Testing
 <!--TODO:-->
@@ -71,12 +90,6 @@ If changes are needed, update `.bashrc` and restart the shell with `nix develop`
 
 ### CI
 GitHub Actions on Push and Pull Request using Ubuntu x86_64-Linux Self-Hosted Runner
-<!--TODO:
-Secret Management
--->
-<!--TODO:
-Dependabot
--->
 
 ### Production
 ```sh
@@ -92,33 +105,4 @@ docker run --rm go_sandbox:dev
 # Destroy image
 docker rmi go_sandbox:dev
 ```
-
-<!--TODO:
-Development Build
-Production Build
-Continuous Delivery
--->
-
-### Nuke
-Follow instructions to purge curricula and launch a somewhat opinionated turnkey ecosystem.  
-```sh
-# Make script executable
-sudo chmod +x nuke.sh
-
-# Execute script
-sudo ./nuke.sh
-```
-
-Update project/repository naming in various places if you'd like:
-- `./.bashrc`
-- `Dockerfile`
-- `README.md`
-- `flake.nix`
-
-<!--TODO:-->
-
-## Curricula
-### Fundamental
-### Construct
-### DataStructure
-### Algorithm
+EOF
