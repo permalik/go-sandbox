@@ -1,7 +1,7 @@
 # go_curricula
-construct:Go Programming
+curricula:Go Programming
 
-## Development
+## Development Environment
 ### Getting Started
 Clone the repo
 ```sh
@@ -14,7 +14,7 @@ nix develop
 ```
 
 #### Pre-Commit
-Run Go formatter, linter, and various Pre-Commit hooks.
+Go formatter, linter, and various Pre-Commit hooks.
 
 Initialize
 ```sh
@@ -38,6 +38,21 @@ Manual Go Lint
 golangci-lint run --fix --timeout=5m
 ```
 
-## CI
+## CI Environment
+GitHub Actions on Push and Pull Request using Ubuntu x86_64-Linux Self-Hosted Runner
 
-## Production
+## Build Environment
+### Development Build
+```sh
+# Restart Docker
+orb restart docker
+
+# Create image
+docker build -t go_curricula:dev .
+
+# Build ephemeral container
+docker run --rm go_curricula:dev
+
+# Destroy image
+docker rmi go_curricula:dev
+```
