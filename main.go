@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("starting main..")
+	fmt.Println("starting main...")
 	fundamentals.Fibonacci(fundamentals.Recursive)
 }
