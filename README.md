@@ -34,6 +34,22 @@ nix develop
 Add shortcuts to flake
 -->
 
+##### Format and Lint
+Nix Format
+```sh
+alejandra <target>
+```
+
+Go Format
+```sh
+goimports -l -w <target>
+```
+
+Go Lint
+```sh
+golangci-lint run --fix --timeout=5m
+```
+
 ##### Pre-Commit
 Go formatter, linter, and various Pre-Commit hooks.
 
@@ -42,28 +58,23 @@ Initialize
 # Run the root init script
 sudo ./.precommit.sh
 ```
+<!--TODO:
+##### Secret Management
+-->
 
-#### Tools
-Manual Nix Format
-```sh
-alejandra <target>
-```
-
-Manual Go Format
-```sh
-goimports -l -w <target>
-```
-
-Manual Go Lint
-```sh
-golangci-lint run --fix --timeout=5m
-```
+#### Testing
+<!--TODO:-->
 
 ### CI
 GitHub Actions on Push and Pull Request using Ubuntu x86_64-Linux Self-Hosted Runner
+<!--TODO:
+Secret Management
+-->
+<!--TODO:
+Dependabot
+-->
 
 ### Production
-#### Development Build
 ```sh
 # Restart Docker
 orb restart docker
@@ -77,6 +88,12 @@ docker run --rm go_sandbox:dev
 # Destroy image
 docker rmi go_sandbox:dev
 ```
+
+<!--TODO:
+Development Build
+Production Build
+Continuous Delivery
+-->
 
 ### Nuke
 Follow instructions to purge curricula and launch a somewhat opinionated turnkey ecosystem
