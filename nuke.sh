@@ -26,9 +26,3 @@ EOF
 
 # Init Go Module
 go mod init go_sandbox
-
-# Rewrite README
-cat README.environment.md > README.md
-
-# Remove README.environment.md Template
-rm README.environment.md
