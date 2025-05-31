@@ -19,7 +19,7 @@ sandbox:Go Programming and Turnkey Ecosystem
 #### Getting Started
 Clone the repo
 ```sh
-git clone git@github.com:permalik/go_sandbox.git
+git clone git@github.com:permalik/go-sandbox.git
 ```
 
 [Install Nix](https://nixos.org/download/)
@@ -84,10 +84,10 @@ Dependabot
 orb restart docker
 
 # Create image
-docker build -t go_sandbox:dev .
+docker build -t go-sandbox:dev .
 
 # Build ephemeral container
-docker run --rm go_sandbox:dev
+docker run --rm go-sandbox:dev
 
 # Destroy image
 docker rmi go_sandbox:dev
