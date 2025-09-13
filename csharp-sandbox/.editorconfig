@@ -1,0 +1,10 @@
+# .editorconfig
+
+# Root configuration
+root = true
+
+# C# files
+[*.cs]
+dotnet_diagnostic.CA1822.severity = warning  # Example: Mark static members as static
+dotnet_diagnostic.CS1591.severity = warning  # Example: Require XML doc comments
+
