@@ -1,0 +1,6 @@
+excluded:
+  - .build
+  - Package.swift
+  - Tests
+  - DerivedData
+
