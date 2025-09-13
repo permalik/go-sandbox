@@ -13,7 +13,7 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pname = "go_curricula";
+        pname = "go_sandbox";
         version = "0.0.1";
         pkgs = import nixpkgs {
           inherit system;
@@ -34,10 +34,8 @@
           ];
 
           shellHook = ''
-            # Source .bashrc
+            cd go-sandbox
             . .bashrc
-
-            # Tooling
             go install golang.org/x/tools/cmd/goimports@latest
           '';
         };

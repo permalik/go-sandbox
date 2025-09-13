@@ -1,5 +1,5 @@
 # go-sandbox
-sandbox:Go Programming and Turnkey Ecosystem
+sandbox:Declarative Go Environment
 
 ### Development
 Enter Nix shell

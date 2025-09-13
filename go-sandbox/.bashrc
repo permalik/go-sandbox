@@ -1,5 +1,5 @@
 # Prompt
-export PS1="\n\[\e[1;32m\][devshell](go) \w\n❯ \[\e[0m\]"
+export PS1="\n\[\e[1;32m\][devshell](go-sandbox) \w\n❯ \[\e[0m\]"
 
 # Aliases
 alias docker-build-dev="docker build -t go_sandbox:dev ."
